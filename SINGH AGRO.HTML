@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html>
+<head>
+<title>Ram Singh Agro Service</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body {margin:0;font-family:Arial;background:#eef2f3;}
+header {background:linear-gradient(green,darkgreen);color:white;padding:20px;text-align:center;}
+
+.card {
+  background:white;
+  margin:15px;
+  padding:15px;
+  border-radius:12px;
+  box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+
+img {width:100%;border-radius:10px;}
+
+button {
+  background:green;
+  color:white;
+  padding:10px;
+  border:none;
+  width:100%;
+  margin-top:10px;
+}
+
+input,select {
+  width:100%;
+  padding:10px;
+  margin:5px 0;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>🚜 RAM SINGH AGRO SERVICE</h1>
+<p>Tractor | Harvester | Bhusa Machine Booking</p>
+</header>
+
+<div class="card">
+<h2>🚜 Tractor</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Tractor_in_India.jpg">
+<p>PREET 6049, Eicher 242, Eicher 312, Swaraj 855</p>
+</div>
+
+<div class="card">
+<h2>🌾 Harvester</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Combine_harvester.jpg">
+<p>₹1000 per bigha</p>
+</div>
+
+<div class="card">
+<h2>🌿 Bhusa Machine</h2>
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5c/Chaff_cutter.jpg">
+<p>₹2000 per trolley</p>
+</div>
+
+<div class="card">
+<h2>📅 Booking</h2>
+
+<input id="name" placeholder="Name">
+<select id="service">
+<option>Tractor</option>
+<option>Harvester</option>
+<option>Bhusa</option>
+</select>
+
+<input type="date" id="date">
+
+<select id="owner">
+<option value="9598451572">Ram Singh</option>
+<option value="9838969848">Rana Singh</option>
+</select>
+
+<button onclick="book()">Book Now</button>
+</div>
+
+<script>
+function book(){
+let n=document.getElementById("name").value;
+let s=document.getElementById("service").value;
+let d=document.getElementById("date").value;
+let o=document.getElementById("owner").value;
+
+let msg="Booking:%0AName:"+n+"%0AService:"+s+"%0ADate:"+d;
+
+window.open("https://wa.me/91"+o+"?text="+msg);
+}
+</script>
+
+</body>
+</html>
