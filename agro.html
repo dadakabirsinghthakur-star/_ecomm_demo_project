@@ -1,0 +1,193 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Singh Agro Services</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #f4fff4;
+}
+
+/* HEADER */
+header {
+    background: green;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.logo h1 {
+    margin: 0;
+}
+
+/* HERO IMAGE */
+.hero img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+
+form, .contact, .services {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* FORM */
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+}
+
+button {
+    background: green;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: darkgreen;
+}
+
+/* SERVICES */
+.services {
+    text-align: center;
+    padding: 20px;
+}
+
+/* CONTACT */
+.contact {
+    background: #eaffea;
+    padding: 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+</style>
+
+<script>
+function sendWhatsApp() {
+    var name = document.getElementById("name").value;
+    var mobile = document.getElementById("mobile").value;
+    var address = document.getElementById("address").value;
+    var work = document.getElementById("work").value;
+    var machine = document.getElementById("machine").value;
+    var date = document.getElementById("date").value;
+
+    var message = "🌾 New Booking:%0A"
+        + "Name: " + name + "%0A"
+        + "Mobile: " + mobile + "%0A"
+        + "Address: " + address + "%0A"
+        + "Work: " + work + "%0A"
+        + "Machine: " + machine + "%0A"
+        + "Date: " + date;
+
+    window.open("https://wa.me/919598451572?text=" + message, "_blank");
+}
+</script>
+
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <div style="font-size:40px;">🚜</div>
+        <div>
+            <h1>Singh Agro Services</h1>
+            <small>Farming & Machine Booking</small>
+        </div>
+    </div>
+</header>
+
+<!-- HERO IMAGE -->
+<div class="hero">
+    <img src="https://images.unsplash.com/photo-1598515213692-5f652f75b1f0?auto=format&fit=crop&w=1200&q=80">
+</div>
+
+<!-- SERVICES -->
+<div class="services">
+    <h2>🚜 Our Machines</h2>
+    <p>Harvester | Tractor | Bhusa Machine | Reaper Binder | Trolley</p>
+</div>
+
+<!-- FORM -->
+<form onsubmit="event.preventDefault(); sendWhatsApp();">
+
+    <h2>📋 Book Service</h2>
+
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="tel" id="mobile" placeholder="Mobile Number" required>
+
+    <input type="text" id="address" placeholder="Enter Your Address" required>
+
+    <textarea id="work" placeholder="Kaunsa kaam karwana hai" required></textarea>
+
+    <select id="machine">
+        <option>Harvester</option>
+        <option>Bhusa Machine</option>
+        <option>Reaper Binder</option>
+        <option>Leveller</option>
+        <option>Trolley</option>
+        <option>Rotavator</option>
+        <option>Cultivator</option>
+        <option>Seeder</option>
+    </select>
+
+    <input type="date" id="date" required>
+
+    <button type="submit">📲 Book on WhatsApp</button>
+</form>
+
+<!-- CONTACT -->
+<div class="contact">
+    <h2>📞 Contact Us</h2>
+    <p><b>Owner:</b> Ram Singh</p>
+    <p><b>Mobile:</b> 9598451572</p>
+    <p><b>Email:</b> gsingh14759@gmail.com</p>
+    <p><b>Address:</b> VeerSinghpur Saraiya Saya, Ambedkar Nagar</p>
+</div>
+
+<footer>
+    <p>© 2026 Singh Agro Services</p>
+</footer>
+
+</body>
+</html>
